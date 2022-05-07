@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FirebaseKotlinCRUD</string>
+    <string name="all">TODO</string>
+    <string name="name">Agenda FireBase</string>
+    <string name="date"></string>
+    <string name="title_activity_main">Agenda</string>
+    <string name="subtitle_activity_main">De Marcos</string>
+    <string name="title_activity_add">Nuevo Contacto</string>
+    <string name="title_activity_edit">Datos del contacto</string>
+    <string name="name_form">Nombre</string>
+    <string name="date_form">Correo</string>
+
+    <string name="description_form">telefono</string>
+    <string name="save">Guardar</string>
+    <string name="description"></string>
+</resources>
