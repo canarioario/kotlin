@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dog"
+            type="com.harlie.dogs.model.DogBreed">
+        </variable>
+        <variable
+            name="palette"
+            type="com.harlie.dogs.model.DogPalette">
+        </variable>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dogDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@{palette.color}"
+        tools:context=".view.DetailFragment">
+
+        <com.harlie.dogs.util.CenterBottomImageView
+            android:id="@+id/dogDetailImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/dog_image"
+            android:minHeight="400dp"
+            android:paddingBottom="4dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:image_url="@{dog.breedImageUrl}"
+            tools:src="@mipmap/ic_dog_icon" />
+
+        <TextView
+            android:id="@+id/dogDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+            android:text="@{dog.breedName}"
+            tools:text="@string/breed_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dogDetailImage"
+            style="@style/Title"/>
+
+        <TextView
+            android:id="@+id/dogDetailPurpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+            android:text="@{dog.breedPurpose}"
+            tools:text="@string/breed_purpose"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dogDetailName"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/dogDetailTemperament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+            android:text="@{dog.breedTemperament}"
+            tools:text="@string/breed_temperament"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dogDetailPurpose"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/dogDetailLifespan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+            android:text="@{dog.breedLifespan}"
+            tools:text="@string/breed_lifespan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dogDetailTemperament"
+            style="@style/Text"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
