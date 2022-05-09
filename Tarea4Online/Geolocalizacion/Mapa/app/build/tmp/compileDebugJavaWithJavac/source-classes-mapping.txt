@@ -1,0 +1,4 @@
+com/example/mapa/databinding/ActivityMapsBinding.java
+ com.example.mapa.databinding.ActivityMapsBinding
+com/example/mapa/BuildConfig.java
+ com.example.mapa.BuildConfig
